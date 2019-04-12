@@ -1,0 +1,33 @@
+﻿@model IEnumerable<usuarios.Models.usuario>
+
+@{
+    ViewBag.Title = "Cadastro de Usuários";
+}
+
+<h2>Lista de usuários cadastrados</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.Código }) |
+                @Html.ActionLink("Apagar", "Delete", new { id = item.Código })
+            </td>
+        </tr>
+    }
+</table>
+
+<p>
+    @Html.ActionLink("Cadastrar Usuário", "Create")
+</p>
