@@ -1,0 +1,2 @@
+Para a execução do projeto basta ter instalado o Virtual Studio.
+Após abrir o Virtual Studio, abra o projeto e clique em IIS Express que irá executar o projeto no navegador padrão do SO.
